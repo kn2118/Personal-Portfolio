@@ -1,9 +1,28 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__link');
+var hitext = document.querySelector(".hi");
+hitext.innerHTML = hitext.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
 
-navToggle.addEventListener('click', () => 
-    {document.body.classList.toggle('nav-open');
-}); 
+var nameText = document.querySelector(".name");
+nameText.innerHTML = nameText.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
 
-navLinks.forEach(link => {link.addEventListener('click', 
-() => { document.body.classList.remove('nav-open');})})
+
+anime.timeline({ loop: false }).add({
+  targets: ".name .letter",
+  opacity: [0, 1],
+  easing: "easeInOutQuad",
+  duration: 2250,
+  delay: (el, i) => 150 * (i + 1),
+});
+
+anime.timeline({ loop: false }).add({
+  targets: ".hi .letter",
+  opacity: [0, 1],
+  easing: "easeInOutQuad",
+  duration: 2250,
+  delay: (el, i) => 150 * (i + 1),
+});

@@ -9,93 +9,124 @@
 
     <!--custom font-->
     <script src="https://kit.fontawesome.com/cd7953543f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>   
-        <div class = "logo">
-            <img src = "img_kevinng.png" alt = "">
-        </div>
-        <button class = "nav-toggle" aria-label= "toggle navigation">
-            <span class= "hamburger"></span>
-        </button> 
-        <nav class= "nav"> 
-            <ul class= "nav__list">
-                <li class = "nav__item"><a href = "#home" class = "nav__link">Home</a></li>
-                <li class = "nav__item"><a href = "#skills" class = "nav__link">Skills</a></li>
-                <li class = "nav__item"><a href = "#description" class = "nav__link">About Me</a></li>
-                <li class = "nav__item"><a href = "#work" class = "nav__link">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
     <!--Introduction-->
     <section class = "intro" id = "home">
-        <h1 class = "section__title section__title--intro">Hi, I am <strong>Kevin Ng</strong></h1>
-        <p class = "section__subtitle section__subtitle--intro">NYU Math & CS Undergrad</p>
-        <img src= "Images/Profile_Ng.JPG" alt = "a picture of Kevin Ng smiling" class = "intro__img" style= "width:300px">
-    </section>
-
-    <!--My-->
-    <section class = "my-skills" id = "skills">
-        <h2 class= "section__title section__title--skills">My Skills</h2> 
-        <div class = "skills">
-            <div class = "skill">
-                <h3>Programming Languages</h3>
-                <p>Python, C++, JavaScript, HTML, CSS, MATLAB</p>
-            </div>
-            <div class = "skill">
-                <h3>Tools & Frameworks</h3>  
-                <p>MongoDB, ReactJs, NodeJs, Material UI, Axios, Github <p>
-            </div>
-        </div>
-        <a href = "#work" class = "btn">My Projects</a> <!--additional info on side projects button-->
+        <h1 class = "section__title section__title--intro"> <Span class = "hi">Hi, I'm</Span> <strong class = "name">Kevin Ng</strong></h1>
+        <p class = "section__subtitle section__subtitle--intro">Frontend Engineer </br> CS @ NYU</p>
+        <img src= "assets/Profile_Ng.JPG" alt = "a picture of Kevin Ng smiling" class = "intro__img">
     </section>
 
     <!--Description-->
     <section class = "my-description" id = "description">
         <h2 class = "section__title section__title--about">Who I am</h2>
-        <p class = "section__subtitle section__subtitle--about">Aspiring Software Engineer</p>
+        <p class = "section__subtitle section__subtitle--about" >App Dev Intern @ HABNET | Mentee @ Microsoft</p>
+        <img src= "./assets/hololens.jpg" alt = "a picture of hololens" class = "description__img">
         <div class = "my-description__body">
-            <p>I am Kevin Ng, an undergraduate student pursuing a computer science degree at NYU with a minor in mathematics. I am currently working on developing my skills in Front-End development but my interests expands to Full-Stack development and CyberSecurity.  
-               For all my projects, I take a holistic view to problems and am comfortable with solving those problems using a quantitative and logical approach. 
-               <br>
-               My hobbies are half-court basketball games, blitz chess, and urban exploration with friends! 
+            <p > I am a frontend engineer with experience in app & web development. 
+                My passion is building products that empower people to accomplish more. 
+                Thus, I always approach my projects with a holistic and user-focused approach. 
+                I'm also a fanatic for mixed reality tech and elegant algorithms.
+            </br>
+            </br>
+                My pastimes are playing basketball, traveling, and exploration with friends. 
             </p>
         </div>
     </section>
-    
-    <!--Projects-->
-    <section class = "my-work" id = "work">
-        <h2 class = "section__title section__title--projects">My work</h2>
-        <p class = "section__subtitle section__subtitle--projects">Side Projects</p> <!--dont use h headers tags for subtitles-->
-        
-        <div class = "portfolio">
-        <!--portfolio item 01-->
-            <a href = "https://www.hiteasyracuse.com/" class = "portfolio-item">
-                <img src = "Images/tea.jpg" alt = "" class = "portfolio__img">
-            </a>
-        </div>
+
+    <!--My-->
+
+    <section class = "skills__container" id = "skills">
+        <h2 class= "skills__title">Technical Skills</h2> 
+        <div class = "skills__list">
+            <div class = "skill__card--on">
+                <h3 class = "skill__category">Languages</h3>
+                <p class = "skill">Python</p>
+                <p class = "skill"> JavaScript</p>
+                <p class = "skill">C++</p>
+                <p class = "skill">Java</p>
+                <p class = "skill"> C#</p>
+            </div>
+            <div class = "skill__card--on">
+                <h3 class = "skill__category">Frameworks & Libraries</h3>
+                <p class = "skill">PyMongo</p>
+                <p class = "skill">ReactJS<p>
+                <p class = "skill">React Native<p>
+                <p class = "skill">Material UI<p>
+                <p class = "skill">Axios<p>
+            </div>
+            <div class = "skill__card--on">
+                <h3 class = "skill__category">Tools</h3>  
+                <p class = "skill">Github<p>
+                <p class = "skill">VS Code<p>
+                <p class = "skill">Firebase<p>
+                <p class = "skill">Azure<p>
+                <p class = "skill">Atlas<p>
+            </div>
     </section>
 
+    <section class = "project__container">
+        <h2 class= "project__list--title">Projects</h2> 
+        <div class = "project__list">
+            <div class= "project">
+                <img src = "assets/tea.jpg" alt = "hi tea project" style= "width: 400px; height: 300px;">
+                <div class = "project--info">
+                    <div class = "project--desc">
+                        <h3 class = "project--title">Hi Tea Website</h3>
+                        <a href = "https://www.hiteasyracuse.com/">
+                            <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                    <p>Bubble tea website providing customers access to values, menu, services, and delivery options of Hi Tea. </p>
+                </div>
+            </div>
+            <div class = "project">
+                <div class = "project--info">
+                    <div class = "project--desc">
+                        <h3 class = "project--title">HABNET App</h3>
+                        <a>
+                            <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                    <p>HABNET app is a cross platform mobile app (Android & IOS) that connects merchants to resources (merchant 
+                        contact info, news, events, resources) for them to succeed. </p>
+                </div>
+                <div class = "WIP">Work </br> In </br> Progress</div>
+            </div>
+            <div class= "project">
+                <div class = "WIP">Work </br> In </br> Progress</div>
+                <div class = "project--info">
+                    <div class = "project--desc">
+                        <h3 class = "project--title">UniMerch App</h3>
+                        <a>
+                            <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                    <p>Unimerch is a cross platform mobile app (Android & IOS) that provides university students a safe and convenient method 
+                        to sell unwanted merchandise.  </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!--footer-->
     <footer>
-        <a href = "mailto:ng.kevin@nyu.edu" class = "footer-link">kn2118@nyu.edu</a>
-        <ul class = "social-list">
-            <li class = "social-list__item">
-                <a class = "social-list__link" href = "https://www.linkedin.com/in/kevin-ng-0824b5173/">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </li>
-            
-            <li class = "social-list__item">
-                <a class = "social-list__link" href = "https://github.com/kn2118">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-        </ul>
+        <h2 style= "margin-bottom: 0.5em">Contact Me</h2>
+        <div>
+            <a class = "social-list__link" href = "mailto:ng.kevin@nyu.edu" >
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a class = "social-list__link" href = "https://www.linkedin.com/in/kevin-ng-0824b5173/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class = "social-list__link" href = "https://github.com/kn2118">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </footer>
     <!--script js should be in the body b/c its modifying the body-->
     <script src = "js/index.js"></script>
